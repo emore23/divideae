@@ -14,7 +14,13 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@phantom/web-components": ["dist/libs/web-components"],
+      "@phantom/web-components-react": [
+        "libs/web-components-react/src/index.ts"
+      ],
+      "@phantom/web-components/loader": ["dist/libs/web-components/loader"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }

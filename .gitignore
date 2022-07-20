@@ -7,6 +7,7 @@
 
 # dependencies
 node_modules
+storybook-static
 
 # IDEs and editors
 /.idea
@@ -37,3 +38,4 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+libs/web-components-react/**/generated
