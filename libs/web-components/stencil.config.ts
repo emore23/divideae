@@ -12,15 +12,21 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
+      dir: '../../dist/libs/web-components/dist',
+      copy: [
+        { src: './styles', dest: 'styles' },
+      ]
     },
     {
       type: 'dist-custom-elements',
+      dir: '../../dist/libs/web-components/ces'
     },
     {
       type: 'docs-readme',
     },
     {
       type: 'www',
+      dir: '../../dist/libs/web-components/www',
       serviceWorker: null, // disable service workers
     },
 

@@ -1,0 +1,41 @@
+@mixin bigger-than($pixels) {
+  @media only screen and (min-width: $pixels) {
+    @content;
+  }
+}
+
+@mixin bigger-than-mobile {
+  @media only screen and (min-width: 360px) {
+    @content;
+  }
+}
+
+@mixin bigger-than-tablet {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin bigger-than-small-desktop {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin bigger-than-medium-desktop {
+  @media only screen and (min-width: 1366px) {
+    @content;
+  }
+}
+
+@mixin bigger-than-large-desktop {
+  @media only screen and (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin bigger-than-ultra-large-desktop {
+  @media only screen and (min-width: 2560px) {
+    @content;
+  }
+}

@@ -3,8 +3,9 @@ import {
   registerHost,
   getHostRef
 } from '@stencil/core/internal/client';
+import { defaultViewports } from '../libs/web-components/src/global/types/breakpoints';
 
-import {defineCustomElements} from '../libs/dist/libs/web-components/loader';
+import {defineCustomElements} from '../dist/libs/web-components/loader';
 
 defineCustomElements();
 
@@ -30,4 +31,22 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  viewport: { viewports: defaultViewports },
+  options: {
+    storySort: {
+      order: [
+        'Getting Started',
+        'Theming',
+        ['Intro', 'Defs', 'Functions', 'Mixins'],
+        'Design Tokens',
+        ['Intro', 'Breakpoints'],
+        'Global',
+        'Components',
+        'Composites',
+        'Workspaces',
+        'Pages',
+        'Tests'
+      ]
+    }
+  }
 }
