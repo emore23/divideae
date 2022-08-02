@@ -15,11 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@phantom/web-components": ["dist/libs/web-components"],
-      "@phantom/web-components-react": [
+      "@divideae/web-components": ["dist/libs/web-components"],
+      "@divideae/web-components-react": [
         "libs/web-components-react/src/index.ts"
       ],
-      "@phantom/web-components/loader": ["dist/libs/web-components/loader"]
+      "@divideae/web-components/loader": ["dist/libs/web-components/loader"]
     }
   },
   "exclude": ["node_modules", "tmp"]

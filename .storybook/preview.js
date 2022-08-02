@@ -4,7 +4,6 @@ import {
   getHostRef
 } from '@stencil/core/internal/client';
 import { defaultViewports } from '../libs/web-components/src/global/types/breakpoints';
-
 import {defineCustomElements} from '../dist/libs/web-components/loader';
 
 defineCustomElements();

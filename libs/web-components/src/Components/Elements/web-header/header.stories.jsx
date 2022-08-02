@@ -1,9 +1,9 @@
 // Dependencies
 /* @jsx h */
-
 import { h } from '@stencil/core';
 
-import { HeaderProps } from './header.model';
+// Assets
+import ignite from '../../../Assets/ignite-simbol.svg';
 
 export default {
   title: 'Element/Header',
@@ -11,12 +11,12 @@ export default {
 
 const Template = (args) => {
   return (
-    <phm-header igniteSimbol={args.igniteSimbol} />
+    <web-header igniteSimbol={args.igniteSimbol} />
   );
 };
 
 export const Header = Template.bind({});
-Header.storyName = 'default';
+Header.storyName = 'Default';
 Header.args = {
-  igniteSimbol: 'componente filho da puta de confiigurar',
+  igniteSimbol: ignite,
 };

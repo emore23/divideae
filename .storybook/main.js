@@ -3,19 +3,7 @@ module.exports = {
     "../libs/**/*.stories.mdx",
     "../libs/**/*.stories.(ts|tsx|js|jsx)"
   ],
-  addons: [
-    "@storybook/addon-actions",
-    "@storybook/addon-links"
-  ],
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    reactDocgenTypescriptOptions: {
-      compilerOptions: {
-        allowSyntheticDefaultImports: false,
-        esModuleInterop: false,
-      },
-    }
-  },
+  addons: ['@storybook/addon-essentials'],
   babelDefault: (config) => {
     return {
       ...config,
@@ -27,7 +15,7 @@ module.exports = {
           'preset'
         ]
       ],
-      presets: [['@babel/typescript', { jsxPragma: 'h', allowNamespaces: true, allowDeclareFields:true }]]
+      presets: [['@babel/typescript', { jsxPragma: 'h' }]]
     };
   }
 };

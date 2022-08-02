@@ -5,70 +5,96 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { IProfileArgs } from "./Components/Interfaces/Compositions/web-card/web-card.model";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
+    interface WebAvatar {
+        "avatar": string;
     }
-    interface PhmHeader {
+    interface WebCard {
+        "backgroundCover": string;
+        "icon": string;
+        "profileArgs": IProfileArgs;
+    }
+    interface WebHeader {
+        "igniteSimbol": string;
+    }
+    interface WebUserProfile {
+        "coverThumbnail": string;
+        "direction": 'row' | 'column';
+        "name": string;
+        "occupation": string;
     }
 }
+export interface WebCardCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLWebCardElement;
+}
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLWebAvatarElement extends Components.WebAvatar, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
+    var HTMLWebAvatarElement: {
+        prototype: HTMLWebAvatarElement;
+        new (): HTMLWebAvatarElement;
     };
-    interface HTMLPhmHeaderElement extends Components.PhmHeader, HTMLStencilElement {
+    interface HTMLWebCardElement extends Components.WebCard, HTMLStencilElement {
     }
-    var HTMLPhmHeaderElement: {
-        prototype: HTMLPhmHeaderElement;
-        new (): HTMLPhmHeaderElement;
+    var HTMLWebCardElement: {
+        prototype: HTMLWebCardElement;
+        new (): HTMLWebCardElement;
+    };
+    interface HTMLWebHeaderElement extends Components.WebHeader, HTMLStencilElement {
+    }
+    var HTMLWebHeaderElement: {
+        prototype: HTMLWebHeaderElement;
+        new (): HTMLWebHeaderElement;
+    };
+    interface HTMLWebUserProfileElement extends Components.WebUserProfile, HTMLStencilElement {
+    }
+    var HTMLWebUserProfileElement: {
+        prototype: HTMLWebUserProfileElement;
+        new (): HTMLWebUserProfileElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
-        "phm-header": HTMLPhmHeaderElement;
+        "web-avatar": HTMLWebAvatarElement;
+        "web-card": HTMLWebCardElement;
+        "web-header": HTMLWebHeaderElement;
+        "web-user-profile": HTMLWebUserProfileElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
+    interface WebAvatar {
+        "avatar"?: string;
     }
-    interface PhmHeader {
+    interface WebCard {
+        "backgroundCover"?: string;
+        "icon"?: string;
+        "onEditUserPerfilClicked"?: (event: WebCardCustomEvent<any>) => void;
+        "profileArgs"?: IProfileArgs;
+    }
+    interface WebHeader {
+        "igniteSimbol"?: string;
+    }
+    interface WebUserProfile {
+        "coverThumbnail"?: string;
+        "direction"?: 'row' | 'column';
+        "name"?: string;
+        "occupation"?: string;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
-        "phm-header": PhmHeader;
+        "web-avatar": WebAvatar;
+        "web-card": WebCard;
+        "web-header": WebHeader;
+        "web-user-profile": WebUserProfile;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "phm-header": LocalJSX.PhmHeader & JSXBase.HTMLAttributes<HTMLPhmHeaderElement>;
+            "web-avatar": LocalJSX.WebAvatar & JSXBase.HTMLAttributes<HTMLWebAvatarElement>;
+            "web-card": LocalJSX.WebCard & JSXBase.HTMLAttributes<HTMLWebCardElement>;
+            "web-header": LocalJSX.WebHeader & JSXBase.HTMLAttributes<HTMLWebHeaderElement>;
+            "web-user-profile": LocalJSX.WebUserProfile & JSXBase.HTMLAttributes<HTMLWebUserProfileElement>;
         }
     }
 }

@@ -1,9 +1,7 @@
-import {MyComponent} from '@phantom/web-components-react'
+import { WebUserProfile } from '@divideae/web-components-react';
 
 export function App() {
-  return (
-    <MyComponent first="react" last="app" />
-  );
+  return <WebUserProfile coverThumbnail='teste' name='estefani' occupation='dev' direction='row' />;
 }
 
 export default App;

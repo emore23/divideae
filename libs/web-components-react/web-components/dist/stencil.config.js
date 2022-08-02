@@ -20,7 +20,7 @@ export const config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: '@phantom/web-components',
+      componentCorePackage: '@divideae/web-components',
       proxiesFile: '../../../libs/web-components-react/src/generated/components.ts',
       includeDefineCustomElements: true,
     }),

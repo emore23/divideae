@@ -1,13 +1,13 @@
 {
-  "name": "phantom",
+  "name": "divideae",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "build-stencil": "nx build web-components -s dist",
-    "storybook": "start-storybook -p 6006 -s dist",
+    "build-stencil": "nx build web-components",
+    "storybook": "nx build web-components --watch & start-storybook -p 6006 -s dist",
     "build-storybook": "build-storybook"
   },
   "private": true,

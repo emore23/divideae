@@ -7,6 +7,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 export const config: Config = {
   namespace: 'web-components',
   taskQueue: 'async',
+  globalStyle: './src/styles/global.scss',
   plugins: [sass()],
   outputTargets: [
     {
@@ -31,7 +32,7 @@ export const config: Config = {
     },
 
     reactOutputTarget({
-      componentCorePackage: '@phantom/web-components',
+      componentCorePackage: '@divideae/web-components',
       proxiesFile:
         '../../../libs/web-components-react/src/generated/components.ts',
       includeDefineCustomElements: true,

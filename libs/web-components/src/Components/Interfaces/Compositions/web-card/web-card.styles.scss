@@ -1,0 +1,56 @@
+:host {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: #202024;
+    border-radius: 8px;
+    width: 256px;
+    height: 294px;
+    position: absolute;
+
+    .user {
+      position: relative;
+      bottom: 30px;
+    }
+
+    > span {
+      width: 100%;
+      border: 1px solid #323238;
+    }
+
+    > button {
+      margin-top: 24px;
+      width: 192px;
+      height: 50px;
+      border: 1px solid #00b37e;
+      border-radius: 8px;
+      background: transparent;
+
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 19px;
+      color: #00b37e;
+      
+      &:hover {
+        transition: all ease-in-out 0.5s;
+        cursor: pointer;
+        border: 1px solid #00875f;
+        border-radius: 8px;
+        background: #00875f;
+        color: #FFFFFF;
+      }
+    }
+
+  }
+}
